@@ -9,7 +9,6 @@ public class AmongThreeTests {
         common.Test_number_2__c = 'Blood Testing';
         Database.SaveResult res = Database.insert(common,false);  
         
-        
         // Then  
         System.assertEquals('This test has already been selected in previous fields.', res.getErrors()[0].getMessage()) ;
     }
@@ -23,7 +22,6 @@ public class AmongThreeTests {
         common2.Test_number_3__c = 'Blood Testing';
         Database.SaveResult res2 = Database.insert(common2,false);  
         
-        
         // Then  
         System.assertEquals('This test has already been selected in previous fields.', res2.getErrors()[0].getMessage()) ;
     }
@@ -35,8 +33,7 @@ public class AmongThreeTests {
         common3.Test_number_1__c = 'Blood Testing';
         common3.Test_number_3__c = 'Blood Testing';
         Database.SaveResult res3 = Database.insert(common3,false);  
-        
-        
+         
         // Then  
         System.assertEquals('This test has already been selected in previous fields.', res3.getErrors()[0].getMessage()) ;
     }
